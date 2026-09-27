@@ -1,9 +1,13 @@
-# salesforce-field-service-notebook
+# Salesforce Field Service Notebook
 A practical learning repository focused on Salesforce Field Service, field service operations, and technical English.
 
-## About
+## Professional Context
 
-I currently work in a Maintenance Planning and Control (PCM) department, where Salesforce Field Service is used to support service operations.
+I currently work in a Maintenance Planning and Control (PCM) environment where Salesforce Field Service is used to support service operations.
+
+My professional experience gives me practical exposure to field service and maintenance processes, while this repository focuses on deepening my technical knowledge of Salesforce Field Service and developing my technical English.
+
+## About
 
 This repository documents my learning journey as I deepen my knowledge of Salesforce Field Service, connecting the platform's concepts with real-world maintenance and field service processes.
 
@@ -39,18 +43,74 @@ The repository also serves as a way to develop my technical English vocabulary a
 
 ## Current Focus
 
-**Salesforce Field Service Fundamentals**
+**Field Service Operations**
 
-Topics currently being explored:
+Currently preparing to explore:
 
-- Field Service basics
-- Service Territories
-- Service Resources
-- Work Orders
-- Service Appointments
-- Scheduling
 - Field service operations
+- Scheduling
+- Dispatching
+- Service resources
+- Service appointments
 - Field service terminology
+
+---
+
+## Trailhead Learning Path
+
+| Module / Trail | Status |
+|---|---|
+| Field Service Basics | ✅ Completed |
+| Field Service: Optimize Operations in the Field | ⏳ Next |
+| Field Service Dispatcher | ⏳ Planned |
+| Agentforce for Field Service | ⏳ Planned |
+
+> This repository is continuously updated as I progress through my Salesforce Field Service learning journey.
+
+---
+
+## Roadmap
+
+### Phase 1 — Fundamentals
+
+- [x] Field Service basics
+- [ ] Core Field Service objects
+- [ ] Service Territories
+- [ ] Service Resources
+- [ ] Work Orders
+- [ ] Service Appointments
+
+### Phase 2 — Field Operations
+
+- [ ] Scheduling
+- [ ] Dispatching
+- [ ] Dispatcher Console
+- [ ] Mobile Field Service
+- [ ] Travel and operating hours
+
+### Phase 3 — Maintenance
+
+- [ ] Assets
+- [ ] Asset hierarchy
+- [ ] Maintenance Plans
+- [ ] Preventive Maintenance
+- [ ] Work management
+
+### Phase 4 — Advanced Topics
+
+- [ ] Inventory and parts
+- [ ] Automation and Flow
+- [ ] Reports and dashboards
+- [ ] Data model
+- [ ] Integrations
+
+### Phase 5 — Practical Projects
+
+- [ ] Field Service process simulation
+- [ ] Scheduling scenario
+- [ ] Maintenance workflow
+- [ ] Automation project
+- [ ] End-to-end Field Service project
 
 ---
 
@@ -84,6 +144,7 @@ salesforce-field-service-notebook/
 ├── README.md
 │
 ├── fundamentals/
+│   └── field-service-basics.md
 │
 ├── scheduling/
 │
