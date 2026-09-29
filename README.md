@@ -138,6 +138,8 @@ Applying what I learn through exercises, documentation, simulations, and future 
 
 ## Repository Structure
 
+## Repository Structure
+
 ```text
 salesforce-field-service-notebook/
 │
@@ -145,6 +147,33 @@ salesforce-field-service-notebook/
 │
 ├── fundamentals/
 │   └── field-service-basics.md
+│      # Salesforce Field Service Basics
+│
+│  ## Overview
+│     The Field Service is a module for maintenance, where the planner view a skills of service resources, territory services, territory resources and operating hours about the service territory and service resouce and also the scheduling for resources. 
+│  ## Key Concepts
+│     Here we have the concepts to use id daily maintenance, like:
+|     Territory Resource - It's a territory about the operation, for example "Dallas, Texas, USA"
+|     Service Resource - The resource an have a skills for the maintenance...
+│  ### Users
+│
+│  ### Service Resources
+│
+│  ### Service Territories
+│
+│  ### Territory Resources
+│
+│  ### Operating Hours
+│
+│  ### Skills
+│
+│  ## How These Concepts Connect
+│
+│  ## Connection With My PCM Experience
+│
+│  ## Technical English
+│
+└──  ## Key Takeaways
 │
 ├── scheduling/
 │
