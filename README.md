@@ -150,24 +150,41 @@ salesforce-field-service-notebook/
 │      # Salesforce Field Service Basics
 │
 │  ## Overview
-│     The Field Service is a module for maintenance, where the planner view a skills of service resources, territory services, territory resources and operating hours about the service territory and service resouce and also the scheduling for resources. 
+│     The Field Service is a module to manage maintenance operations, where the planner view a skills of service resources, territory services, territory resources and operating hours about the service territory and service resouce and also the          |     scheduling for resources.
+|     This section documents the fundamental concepts I learned while completing the Salesforce Trailhead Field Service Basics module.|
+|     My goal is to understand not only how Salesforce Field Service is used, but also how its concepts relate to real-world maintenance and field service operations.
+|
 │  ## Key Concepts
-│     Here we have the concepts to use id daily maintenance, like:
-|     Territory Resource - It's a territory about the operation, for example "Dallas, Texas, USA"
-|     Service Resource - The resource an have a skills for the maintenance...
-│  ### Users
+│     ### Users
+|     A User is an individual account that allows a person to access Salesforce.
+|     In the Field Service context, users can have different responsibilities, such as field technicians, dispatchers, service managers, planners, or agents.
+|     A user can also be associated with a Service Resource when the person needs to be managed as a resource for field service operations.
+│       
+│     ### Service Resource
+|     A Service Resource represents a person, crew, or other resource that can be scheduled to perform field service work.
+|     For example, a field technician can be represented as a Service Resource and associated with a Salesforce User.
+|     Service Resources can be related to skills, service territories, and availability, which helps Salesforce determine whether a resource is suitable for a specific service.
 │
-│  ### Service Resources
+│     ### Service Territory
+|     A Service Territory represents a geographical or operational area where field service work is performed.
+|     Service Territories help organizations organize their field service operations based on location or operational coverage.
+|     A Service Resource can be associated with one or more Service Territories depending on the organization's configuration and operational requirements.
 │
-│  ### Service Territories
+│     ### Territory Resources
+|     A Territory Resource represents the association between a Service Resource and a Service Territory.
+|     This relationship defines which service territory a resource is assigned to or can operate in.
+|     For example, a field technician can be represented as a Service Resource and associated with the Campinas Service Territory through a Territory Resource.
+|
+│     ### Operating Hours
+│     Operating Hours define when a service operation, territory, or resource is available to perform field service work.
+|     They help determine when service appointments can be scheduled based on the organization's operating schedule.
+|     Operating Hours can therefore be an important factor when determining whether a service can be performed at a specific time.
 │
-│  ### Territory Resources
-│
-│  ### Operating Hours
-│
-│  ### Skills
-│
-│  ## How These Concepts Connect
+|     ### Skills
+│     Skills represent the abilities or qualifications required to perform specific types of field service work.
+|     A Service Resource can have one or more skills, and these skills can be used when determining whether the resource is qualified for a specific service appointment.
+│  
+|  ## How These Concepts Connect
 │
 │  ## Connection With My PCM Experience
 │
