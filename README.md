@@ -7,6 +7,14 @@ I currently work in a Maintenance Planning and Control (PCM) environment where S
 
 My professional experience gives me practical exposure to field service and maintenance processes, while this repository focuses on deepening my technical knowledge of Salesforce Field Service and developing my technical English.
 
+I use the platform every day as an end user. The next step is to learn how it is configured, administered, and designed.
+
+## Career Goal
+
+- **Short term:** move from PCM to a Field Service Administrator role.
+- **Long term:** grow into a Field Service Architect role.
+- **Horizon:** international opportunities within 2 to 3 years, which means technical English and a public portfolio are part of the plan, not extras.
+
 ## About
 
 This repository documents my learning journey as I deepen my knowledge of Salesforce Field Service, connecting the platform's concepts with real-world maintenance and field service processes.
@@ -27,6 +35,17 @@ The repository also serves as a way to develop my technical English vocabulary a
 
 ---
 
+## Two Tracks, One Plan
+
+I follow two tracks at the same time. Each one covers the weak spot of the other.
+
+| Track | What it gives me | Where it lives |
+|---|---|---|
+| Certification Track | A clear map and credentials that open doors | [`certification/`](certification/) |
+| Project Track | Proof that I can configure and design, not just explain | [`05-projects/`](05-projects/), [`labs/`](labs/), [`design-decisions/`](design-decisions/) |
+
+---
+
 ## Learning Goals
 
 - Understand Salesforce Field Service concepts and architecture
@@ -36,6 +55,9 @@ The repository also serves as a way to develop my technical English vocabulary a
 - Explore assets, maintenance, inventory, and mobile operations
 - Develop practical Salesforce knowledge through hands-on exercises
 - Build Salesforce-related projects and documentation
+- Learn Salesforce administration fundamentals that Field Service depends on
+- Practice architecture thinking: document options, trade-offs, and decisions
+- Earn Salesforce certifications that match the Administrator-to-Architect path
 - Improve technical English for international professional environments
 - Prepare for future Salesforce and Field Service-related interviews
 
@@ -43,10 +65,12 @@ The repository also serves as a way to develop my technical English vocabulary a
 
 ## Current Focus
 
-**Field Service Operations**
+**Setup and Administration Foundations, plus Field Service Operations**
 
 Currently preparing to explore:
 
+- A practice org for hands-on work
+- Salesforce core administration (data model, security, Flow, reports)
 - Field service operations
 - Scheduling
 - Dispatching
@@ -71,18 +95,29 @@ Currently preparing to explore:
 
 ## Roadmap
 
+### Phase 0 — Setup and Administration Foundations
+
+- [ ] Practice org ready (see [`00-setup/`](00-setup/))
+- [ ] Salesforce core data model (objects, fields, relationships)
+- [ ] Security (profiles, permission sets, sharing)
+- [ ] Flow basics
+- [ ] Reports and dashboards basics
+- [ ] Platform Administrator exam
+
 ### Phase 1 — Fundamentals
 
 - [x] Field Service basics
 - [ ] Core Field Service objects
 - [ ] Service Territories
 - [ ] Service Resources
+- [ ] Work Types
 - [ ] Work Orders
 - [ ] Service Appointments
 
 ### Phase 2 — Field Operations
 
 - [ ] Scheduling
+- [ ] Scheduling policies, work rules, and service objectives
 - [ ] Dispatching
 - [ ] Dispatcher Console
 - [ ] Mobile Field Service
@@ -98,25 +133,27 @@ Currently preparing to explore:
 
 ### Phase 4 — Advanced Topics
 
+- [ ] Optimization (global optimization, capacity planning)
 - [ ] Inventory and parts
 - [ ] Automation and Flow
 - [ ] Reports and dashboards
 - [ ] Data model
 - [ ] Integrations
+- [ ] Agentforce for Field Service
 
 ### Phase 5 — Practical Projects
 
-- [ ] Field Service process simulation
-- [ ] Scheduling scenario
-- [ ] Maintenance workflow
-- [ ] Automation project
-- [ ] End-to-end Field Service project
+- [ ] Project 1: Maintenance operation setup
+- [ ] Project 2: Preventive maintenance workflow
+- [ ] Project 3: Flow automation
+- [ ] Project 4: Integration with an external system
+- [ ] Project 5: End-to-end capstone with architecture documentation
 
 ---
 
 ## Learning Approach
 
-My learning process combines four areas:
+My learning process combines five areas:
 
 ### 1. Salesforce
 
@@ -134,6 +171,16 @@ Studying Salesforce documentation and Trailhead content in English while buildin
 
 Applying what I learn through exercises, documentation, simulations, and future Salesforce-related projects.
 
+### 5. Architecture Thinking
+
+Recording why I chose one design over another. Every important topic gets three parts:
+
+| Part | Question it answers | Folder |
+|---|---|---|
+| Concept | What is it? | Phase folders (`01` to `04`) |
+| Lab | Can I build it in an org? | [`labs/`](labs/) |
+| Decision | When do I use it, and when not? | [`design-decisions/`](design-decisions/) |
+
 ---
 
 ## Repository Structure
@@ -143,6 +190,8 @@ salesforce-field-service-notebook/
 │
 ├── README.md
 │
+├── 00-setup/                 (practice org, environment notes)
+│
 ├── 01-fundamentals/          (Phase 1)
 │   └── field-service-basics.md
 │
@@ -150,9 +199,15 @@ salesforce-field-service-notebook/
 │
 ├── 03-maintenance/           (Phase 3: assets, maintenance, preventive maintenance)
 │
-├── 04-advanced/              (Phase 4: inventory, automation, reports, data model, integrations)
+├── 04-advanced/              (Phase 4: optimization, inventory, automation, data model, integrations)
 │
-├── 05-projects/              (Phase 5)
+├── 05-projects/              (Phase 5: five projects)
+│
+├── labs/                     (hands-on exercises done in the org)
+│
+├── design-decisions/         (problem, options, decision, consequences)
+│
+├── certification/            (exam map, gap analysis, timeline)
 │
 ├── vocabulary/
 │
@@ -160,91 +215,3 @@ salesforce-field-service-notebook/
 │
 └── learning-log/
 ```
-# Salesforce Field Service Basics
-
-## Overview
-Field Service is a Salesforce product to manage maintenance operations, where the planner views the skills of service resources, service territories, service territory members and operating hours of the service territory and service resource, and also the scheduling for resources.
-This section documents the fundamental concepts I learned while completing the Salesforce Trailhead Field Service Basics module.
-My goal is to understand not only how Salesforce Field Service is used, but also how its concepts relate to real-world maintenance and field service operations.
-
-## Key Concepts
-
-### Users
-A User is an individual account that allows a person to access Salesforce.
-In the Field Service context, users can have different responsibilities, such as field technicians, dispatchers, service managers, planners, or agents.
-A user can also be associated with a Service Resource when the person needs to be managed as a resource for field service operations.
-
-### Service Resource
-A Service Resource represents a person, crew, or other resource that can be scheduled to perform field service work.
-For example, a field technician can be represented as a Service Resource and associated with a Salesforce User.
-Service Resources can be related to skills, service territories, and availability, which helps Salesforce determine whether a resource is suitable for a specific service.
-
-### Service Territory
-A Service Territory represents a geographical or operational area where field service work is performed.
-Service Territories help organizations organize their field service operations based on location or operational coverage.
-A Service Resource can be associated with one or more Service Territories depending on the organization's configuration and operational requirements.
-
-### Service Territory Members
-A Service Territory Member represents the association between a Service Resource and a Service Territory.
-This relationship defines which service territory a resource is assigned to or can operate in.
-For example, a field technician can be represented as a Service Resource and associated with the Campinas Service Territory through a Service Territory Member.
-
-### Operating Hours
-Operating Hours define when a service operation, territory, or resource is available to perform field service work.
-They help determine when service appointments can be scheduled based on the organization's operating schedule.
-Operating Hours can therefore be an important factor when determining whether a service can be performed at a specific time.
-
-### Skills
-Skills represent the abilities or qualifications required to perform specific types of field service work.
-A Service Resource can have one or more skills, and these skills can be used when determining whether the resource is qualified for a specific service appointment.
-
-## How These Concepts Connect
-The concepts introduced in Field Service are connected to help organizations manage field service resources and determine who can perform a specific service.
-
-A simplified relationship can be represented as:
-
-```text
-Service Territory
-        ↑
-        │
-Service Territory Member
-        │
-        ↓
-Service Resource
-        │
-        └── Service Resource Skill ──→ Skill
-
-Operating Hours → linked to the Service Territory and to the Service Territory Member
-Availability    → result of Operating Hours, absences, and existing appointments
-```
-
-A Service Resource can be associated with a Salesforce User.
-
-These relationships provide information that can be used when scheduling and assigning field service work.
-
-## Connection With My PCM Experience
-My current role in Maintenance Planning and Control (PCM) involves planning and coordinating external technicians.
-Because of this experience, I was able to relate Salesforce Field Service concepts such as Service Resources, Service Territories, Service Territory Members, Skills, and Operating Hours to real-world field service operations.
-For example, when planning an external technician, it is necessary to consider factors such as the technician's area of operation, availability, working hours, and technical capabilities.
-Understanding how Salesforce represents these concepts helped me connect my existing operational knowledge with the platform's data model and field service processes.
-
-## Technical English
-
-| Term | Português | Example |
-|---|---|---|
-| User | Usuário | The user can access Salesforce based on their permissions. |
-| Service Resource | Recurso de serviço | The technician is represented as a Service Resource. |
-| Service Territory | Território de serviço | The technician is assigned to a Service Territory. |
-| Service Territory Member | Relação entre recurso e território | The Service Territory Member connects the Service Resource to the Service Territory. |
-| Operating Hours | Horário de funcionamento/operação | The service must be scheduled within the operating hours. |
-| Skill | Habilidade/qualificação | The technician has the required skill for the job. |
-| Availability | Disponibilidade | The technician's availability must be considered when scheduling the appointment. |
-
-## Key Takeaways
-- A Salesforce User represents an individual account that can access the platform.
-- A Service Resource represents a person, crew, or other resource that can be scheduled for field service work.
-- A Service Territory represents a geographical or operational area where field service work is performed.
-- A Service Territory Member represents the association between a Service Resource and a Service Territory.
-- Skills represent the abilities or qualifications required to perform specific field service work.
-- Operating Hours help define when field service operations can be performed.
-- These concepts work together to support field service scheduling and resource management.
